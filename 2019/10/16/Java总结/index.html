@@ -429,6 +429,15 @@ Java SE（Java Platform，Standard Edition）">
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java/" class="post-category">
+                                Java
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -442,7 +451,7 @@ Java SE（Java Platform，Standard Edition）">
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.6k
+                        2.5k
                     </div>
                     
 
@@ -572,8 +581,7 @@ test<span class="token punctuation">.</span><span class="token function">phone</
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>“手机可以玩游戏”<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="关于String的区别"><a href="#关于String的区别" class="headerlink" title="关于String的区别"></a>关于String的区别</h2><p>1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？</p>
-<h3 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h3><p>String类的底层源码中，通过final关键字修饰字符串数组，private final char value[]，所以是不可变的。StringBuffer和StringBuilder类是集成自 AbstractStringBuilder 类， AbstractStringBuilder 类中的变量没有用final关键字修饰，所以是可变的。</p>
+<h2 id="1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"><a href="#1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？" class="headerlink" title="1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"></a>1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？</h2><h3 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h3><p>String类的底层源码中，通过final关键字修饰字符串数组，private final char value[]，所以是不可变的。StringBuffer和StringBuilder类是集成自 AbstractStringBuilder 类， AbstractStringBuilder 类中的变量没有用final关键字修饰，所以是可变的。</p>
 <h3 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h3><p>String是不可变的，是常量，所以是线程安全的。StringBuilder和StringBuffer都继承自AbstractStringBuilder 类，StringBuffer对方法加了同步锁，所以是线程安全的，而StringBuilder没有加同步锁，所以是线程不安全的。</p>
 <h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>对String类型进行改变是都会new一个新的string对象，并指向新的对象；</p>
 <p>StringBuffer直接通过改变自身变量的值，StringBuilder相对能提升性能，但有线程不安全的情况。</p>
@@ -588,8 +596,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <p>2.接口中的变量默认是final类型，而抽象类不是；</p>
 <p>3.类只能继承一个抽象类，而接口可以实现多个；</p>
 <p>4.类继承接口需要实现所有方法，抽象类不需要；</p>
-<h2 id="5-接口不能用new实例化"><a href="#5-接口不能用new实例化" class="headerlink" title="5.接口不能用new实例化"></a>5.接口不能用new实例化</h2><p>可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。</p>
-<p>5.Arraylist 与 LinkedList 异同<br>安全性<br>ArrayList与LinkedList都是线程不安全的。</p>
+<h2 id="5-接口不能用new实例化，可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。"><a href="#5-接口不能用new实例化，可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。" class="headerlink" title="5.接口不能用new实例化，可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。"></a>5.接口不能用new实例化，可以声明。必须引用一个实现该接口的对象抽象是对类的抽象，是一种模板设计，接口是行为的抽象，是一种行为的规范。</h2><p>5.Arraylist 与 LinkedList 异同<br>安全性<br>ArrayList与LinkedList都是线程不安全的。</p>
 <p>数据结构实现<br>ArryayList是基于Object数组，而LinkedList是基于双向循环链表（JDK1.6之前为循环链表，之后取消了循环）</p>
 <p>插入删除的影响<br>ArrayList采用数组存储，插入删除受元素位置的影响；</p>
 <p>LinkedList采用链表存储，插入删除不收元素位置影响；</p>
@@ -817,8 +824,12 @@ hexo d
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            李秀远
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -863,8 +874,12 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            李秀远
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SQL/" class="post-category">
+                                    SQL
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1027,7 +1042,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.2k</span>&nbsp;字
+                class="white-color">5.3k</span>&nbsp;字
             
             
             
