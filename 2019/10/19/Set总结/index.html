@@ -4,16 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL 函数, 我的快乐">
-    <meta name="description" content="avg（）函数定义和用法AVG 函数返回数值列的平均值。NULL 值不包括在计算中。
-SQL AVG() 语法select avg(字段名)as 新字段名 from 表名;
-实例我们拥有下面这个stuinfo表：
-
-
-
-id
-date
-na">
+    <meta name="keywords" content="Set总结, 我的快乐">
+    <meta name="description" content="SetCollection        以value形式存在Set        无序无重复
+1.具体实现类HashSetTreeSet
+2.基本的使用3.无序 无重复无序：我们使用集合存放的顺序 集合内取出来的顺序不一致集合本身是有自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +15,7 @@ na">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SQL 函数 | 我的快乐</title>
+    <title>Set总结 | 我的快乐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,13 +302,13 @@ na">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        SQL 函数
+                        Set总结
                     </div>
                 </div>
             </div>
@@ -426,12 +420,8 @@ na">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL/">
-                                <span class="chip bg-color">SQL</span>
-                            </a>
-                        
-                            <a href="/tags/语法/">
-                                <span class="chip bg-color">语法</span>
+                            <a href="/tags/Set/">
+                                <span class="chip bg-color">-Set</span>
                             </a>
                         
                     </div>
@@ -442,8 +432,8 @@ na">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SQL函数/" class="post-category">
-                                SQL函数
+                            <a href="/categories/Java/" class="post-category">
+                                Java
                             </a>
                         
                     </div>
@@ -454,21 +444,21 @@ na">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-17
+                    2019-10-19
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        978
+                        195
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        1 分
                     </div>
                     
                 
@@ -484,278 +474,18 @@ na">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="avg（）函数"><a href="#avg（）函数" class="headerlink" title="avg（）函数"></a>avg（）函数</h2><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>AVG 函数返回数值列的平均值。NULL 值不包括在计算中。</p>
-<h3 id="SQL-AVG-语法"><a href="#SQL-AVG-语法" class="headerlink" title="SQL AVG() 语法"></a>SQL AVG() 语法</h3><p><code>select avg(字段名)as 新字段名 from 表名;</code></p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>我们拥有下面这个<code>stuinfo</code>表：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>date</th>
-<th>name</th>
-<th>age</th>
-<th>ach</th>
-<th>tuition</th>
-<th>sex</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>2019-10-17 17:44:45</td>
-<td>亚索</td>
-<td>18</td>
-<td>84</td>
-<td>10600</td>
-<td>男</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2018-10-17 17:45:42</td>
-<td>寒冰</td>
-<td>16</td>
-<td>95</td>
-<td>10600</td>
-<td>女</td>
-</tr>
-<tr>
-<td>3</td>
-<td>2019-08-01 17:45:34</td>
-<td>布隆</td>
-<td>10</td>
-<td>84</td>
-<td>10000</td>
-<td>男</td>
-</tr>
-<tr>
-<td>4</td>
-<td>2019-01-17 17:46:42</td>
-<td>劫</td>
-<td>23</td>
-<td>99</td>
-<td>500</td>
-<td>男</td>
-</tr>
-<tr>
-<td>5</td>
-<td>2019-10-13 17:46:52</td>
-<td>小鱼儿</td>
-<td>45</td>
-<td>84</td>
-<td>6000</td>
-<td>女</td>
-</tr>
-</tbody></table>
-<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子 1"></a>例子 1</h4><p>现在，我们希望计算 <code>age</code> 字段的平均值。</p>
-<p>我们使用如下 SQL 语句：<br><code>select avg(age)as avgAge from stuinfo;</code><br>结果集类似这样：</p>
-<table>
-<thead>
-<tr>
-<th>avgAge</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>22.4000</td>
-</tr>
-</tbody></table>
-<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子 2"></a>例子 2</h4><p>现在，我们希望找到 <code>age</code> 值高于 <code>age</code> 平均值的客户。<br>我们使用如下 SQL 语句：<br><code>select name from stuinfo where age&gt;(select avg(age) from stuinfo);</code></p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>劫</td>
-</tr>
-<tr>
-<td>小鱼儿</td>
-</tr>
-</tbody></table>
-<h2 id="count-语句"><a href="#count-语句" class="headerlink" title="count()语句"></a>count()语句</h2><p>COUNT() 函数返回匹配指定条件的行数。</p>
-<h3 id="COUNT-column-name"><a href="#COUNT-column-name" class="headerlink" title="COUNT(column_name)"></a>COUNT(column_name)</h3><p>函数返回指定列的值的数目（NULL 不计入）：<br><strong>语法</strong><br><code>SELECT COUNT(column_name) FROM table_name</code></p>
-<h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT(*)"></a>COUNT(*)</h3><p>函数返回表中的记录数：<br><code>SELECT COUNT(*) FROM table_name</code></p>
-<h3 id="COUNT-DISTINCT-column-name"><a href="#COUNT-DISTINCT-column-name" class="headerlink" title="COUNT(DISTINCT column_name)"></a>COUNT(DISTINCT column_name)</h3><p>函数返回指定列的不同值的数目：<br><code>SELECT COUNT(DISTINCT column_name) FROM table_name</code></p>
-<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>我们拥有下面这个<code>stuinfo</code>表：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>date</th>
-<th>name</th>
-<th>age</th>
-<th>ach</th>
-<th>tuition</th>
-<th>sex</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>2019-10-17 17:44:45</td>
-<td>亚索</td>
-<td>18</td>
-<td>84</td>
-<td>10600</td>
-<td>男</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2018-10-17 17:45:42</td>
-<td>寒冰</td>
-<td>16</td>
-<td>95</td>
-<td>10600</td>
-<td>女</td>
-</tr>
-<tr>
-<td>3</td>
-<td>2019-08-01 17:45:34</td>
-<td>布隆</td>
-<td>10</td>
-<td>84</td>
-<td>10000</td>
-<td>男</td>
-</tr>
-<tr>
-<td>4</td>
-<td>2019-01-17 17:46:42</td>
-<td>劫</td>
-<td>23</td>
-<td>99</td>
-<td>500</td>
-<td>男</td>
-</tr>
-<tr>
-<td>5</td>
-<td>2019-10-13 17:46:52</td>
-<td>小鱼儿</td>
-<td>45</td>
-<td>84</td>
-<td>6000</td>
-<td>女</td>
-</tr>
-</tbody></table>
-<p>现在，我们希望计算学生 <code>tuition</code> 的10600学费总数。<br>我们使用如下 SQL 语句：<br><code>select count(tuition) as countTuition from stuinfo where tuition = 10600;</code><br>以上 SQL 语句的结果是 2，因为学生 tuition 共有 2 人：</p>
-<table>
-<thead>
-<tr>
-<th>countTuition</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2</td>
-</tr>
-</tbody></table>
-<h4 id="SQL-COUNT-实例"><a href="#SQL-COUNT-实例" class="headerlink" title="SQL COUNT(*) 实例"></a>SQL COUNT(*) 实例</h4><p>如果我们省略 WHERE 子句，比如这样：<br><code>select count(*) as count from stuinfo;</code><br>结果集类似这样：</p>
-<table>
-<thead>
-<tr>
-<th>count</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>5</td>
-</tr>
-</tbody></table>
-<p>这是表中的总行数。</p>
-<h4 id="SQL-COUNT-DISTINCT-column-name-实例"><a href="#SQL-COUNT-DISTINCT-column-name-实例" class="headerlink" title="SQL COUNT(DISTINCT column_name) 实例"></a>SQL COUNT(DISTINCT column_name) 实例</h4><p>现在，我们希望计算 “stuinfo” 表中不同成绩的数目。<br>我们使用如下 SQL 语句：<br><code>select count(distinct ach) as numAch from stuinfo;</code><br>结果集类似这样：</p>
-<table>
-<thead>
-<tr>
-<th>numAch</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>3</td>
-</tr>
-</tbody></table>
-<h2 id="max-函数"><a href="#max-函数" class="headerlink" title="max()函数"></a>max()函数</h2><p>MAX 函数返回一列中的最大值。NULL 值不包括在计算中。<br><strong>SQL MAX() 语法</strong><br><code>SELECT MAX(column_name) FROM table_name</code></p>
-<h2 id="min-函数"><a href="#min-函数" class="headerlink" title="min()函数"></a>min()函数</h2><p>MIN 函数返回一列中的最小值。NULL 值不包括在计算中。<br><strong>SQL MIN() 语法</strong><br><code>SELECT MIN(column_name) FROM table_name</code><br><strong>注释：</strong>MIN 和 MAX 也可用于文本列，以获得按字母顺序排列的最高或最低值。</p>
-<h2 id="sum-函数"><a href="#sum-函数" class="headerlink" title="sum()函数"></a>sum()函数</h2><p>SUM 函数返回数值列的总数（总额）。<br><strong>SQL SUM() 语法</strong><br><code>SELECT SUM(column_name) FROM table_name</code></p>
-<h2 id="first-函数"><a href="#first-函数" class="headerlink" title="first()函数"></a>first()函数</h2><p>FIRST() 函数返回指定的字段中第一个记录的值。</p>
-<p>提示：可使用 ORDER BY 语句对记录进行排序。<br><strong>SQL FIRST() 语法</strong><br><code>SELECT FIRST(column_name) FROM table_name</code></p>
-<h2 id="list-函数"><a href="#list-函数" class="headerlink" title="list()函数"></a>list()函数</h2><p>LAST() 函数返回指定的字段中最后一个记录的值。</p>
-<p>提示：可使用 ORDER BY 语句对记录进行排序。<br><strong>SQL LAST() 语法</strong><br><code>SELECT LAST(column_name) FROM table_name</code></p>
-<h2 id="Group-By函数"><a href="#Group-By函数" class="headerlink" title="Group By函数"></a>Group By函数</h2><p>GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。<br><strong>SQL GROUP BY 语法</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">operator</span> <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name</span><br></pre></td></tr></table></figure>
-
-<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>我们拥有下面这个 “stuinfo” 表：</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>date</th>
-<th>name</th>
-<th>age</th>
-<th>ach</th>
-<th>tuition</th>
-<th>sex</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td>2019-10-17 17:44:45</td>
-<td>亚索</td>
-<td>18</td>
-<td>84</td>
-<td>10600</td>
-<td>男</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2018-10-17 17:45:42</td>
-<td>寒冰</td>
-<td>16</td>
-<td>95</td>
-<td>10600</td>
-<td>女</td>
-</tr>
-<tr>
-<td>3</td>
-<td>2019-08-01 17:45:34</td>
-<td>布隆</td>
-<td>10</td>
-<td>84</td>
-<td>10000</td>
-<td>男</td>
-</tr>
-<tr>
-<td>4</td>
-<td>2019-01-17 17:46:42</td>
-<td>劫</td>
-<td>23</td>
-<td>99</td>
-<td>500</td>
-<td>男</td>
-</tr>
-<tr>
-<td>5</td>
-<td>2019-10-13 17:46:52</td>
-<td>小鱼儿</td>
-<td>45</td>
-<td>84</td>
-<td>6000</td>
-<td>女</td>
-</tr>
-</tbody></table>
-<p>现在我们希望查找男生和女生的总分数并想要使用 GROUP BY 进行组合。<br>我们使用下列 SQL 语句：<br><code>select sex,sum(ach) from stuinfo group by sex;</code><br>结果：</p>
-<table>
-<thead>
-<tr>
-<th>sex</th>
-<th>sum(ach)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>女</td>
-<td>179</td>
-</tr>
-<tr>
-<td>男</td>
-<td>267</td>
-</tr>
-</tbody></table>
-<h2 id="Having"><a href="#Having" class="headerlink" title="Having();"></a>Having();</h2><p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。<br><strong>SQL HAVING 语法</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">operator</span> <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name</span><br><span class="line"><span class="keyword">HAVING</span> aggregate_function(column_name) <span class="keyword">operator</span> <span class="keyword">value</span></span><br></pre></td></tr></table></figure>
+                <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>Collection        以value形式存在<br>Set        无序无重复</p>
+<h3 id="1-具体实现类"><a href="#1-具体实现类" class="headerlink" title="1.具体实现类"></a>1.具体实现类</h3><p>HashSet<br>TreeSet</p>
+<h3 id="2-基本的使用"><a href="#2-基本的使用" class="headerlink" title="2.基本的使用"></a>2.基本的使用</h3><h3 id="3-无序-无重复"><a href="#3-无序-无重复" class="headerlink" title="3.无序 无重复"></a>3.无序 无重复</h3><p>无序：我们使用集合存放的顺序 集合内取出来的顺序不一致<br>集合本身是有自己的算法排布顺序  hash算法</p>
+<h3 id="HashSet—-gt-（HashMap-数组-链表-散链表）"><a href="#HashSet—-gt-（HashMap-数组-链表-散链表）" class="headerlink" title="HashSet—&gt;（HashMap 数组+链表 散链表）"></a>HashSet—&gt;（HashMap 数组+链表 散链表）</h3><h4 id="1-java-utill"><a href="#1-java-utill" class="headerlink" title="1.java.utill"></a>1.java.utill</h4><h4 id="2-如何创建对象-无参数-有参数"><a href="#2-如何创建对象-无参数-有参数" class="headerlink" title="2.如何创建对象 无参数 有参数"></a>2.如何创建对象 无参数 有参数</h4><p><code>HashSet&lt;String&gt; set =new HashSet&lt;String&gt;();</code></p>
+<h4 id="3-集合容器的基本使用"><a href="#3-集合容器的基本使用" class="headerlink" title="3.集合容器的基本使用"></a>3.集合容器的基本使用</h4><ul>
+<li>增    add(value)   addAall(collection c)   retainAll  removeAll  并集 交集 差集</li>
+<li>删    boolean = remove(Objest)</li>
+<li>改    没有</li>
+<li>查    增强for循环集合遍历</li>
+</ul>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String v:set)&#123;</span><br><span class="line">System.out.println(v);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//迭代器：</span></span><br><span class="line">Iterator&lt;String&gt; it = set.iterator();</span><br><span class="line"><span class="comment">//判断下一个位置是否有元素</span></span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">	String value = it.next();</span><br><span class="line">	System.out.println(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
             </div>
@@ -923,7 +653,7 @@ na">
         repo: 'xiu0928.github.io',
         owner: 'xiu0928',
         admin: ["xiu0928"],
-        id: '2019-10-17T17-36-12',
+        id: '2019-10-19T20-45-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -948,20 +678,19 @@ na">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/19/Map总结/">
+                <a href="/2019/10/19/ArrayList总结/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Map总结">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="ArrayList总结">
                         
-                        <span class="card-title">Map总结</span>
+                        <span class="card-title">ArrayList总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            https://docs.oracle.com/javase/8/docs/api/
-Map映射    通过某一个key可以直接定位到value值存储的方式：键值对    存储   key-valuekey无序无重复    value无序可
+                            ArrayList1.底层是利用（动态）数组形式实现 1.52.如何构建一个ArrayList对象无参构造方法    带默认容量的构造方法List&lt;String&gt; list=new ArrayList&lt;String&gt;
                         
                     </div>
                     <div class="publish-info">
@@ -983,8 +712,8 @@ Map映射    通过某一个key可以直接定位到value值存储的方式：�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Map/">
-                        <span class="chip bg-color">-Map</span>
+                    <a href="/tags/泛型-Vector-ArrayList/">
+                        <span class="chip bg-color">-泛型 -Vector -ArrayList</span>
                     </a>
                     
                 </div>
@@ -998,36 +727,32 @@ Map映射    通过某一个key可以直接定位到value值存储的方式：�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/16/Hexo/">
+                <a href="/2019/10/19/Map总结/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hexo安装教程">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Map总结">
                         
-                        <span class="card-title">Hexo安装教程</span>
+                        <span class="card-title">Map总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装hexo基础框架1npm install hexo-cli -g
-
-更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
-123hexo cleanhexo ghexo d
-
-网易云音乐外链1https:
+                            https://docs.oracle.com/javase/8/docs/api/
+Map映射    通过某一个key可以直接定位到value值存储的方式：键值对    存储   key-valuekey无序无重复    value无序可
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -1037,8 +762,8 @@ Map映射    通过某一个key可以直接定位到value值存储的方式：�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo-技术-Git/">
-                        <span class="chip bg-color">-Hexo -技术 -Git</span>
+                    <a href="/tags/Map/">
+                        <span class="chip bg-color">-Map</span>
                     </a>
                     
                 </div>

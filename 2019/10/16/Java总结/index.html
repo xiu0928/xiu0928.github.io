@@ -451,7 +451,7 @@ Java SE（Java Platform，Standard Edition）">
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.5k
+                        2.6k
                     </div>
                     
 
@@ -480,107 +480,34 @@ Java SE（Java Platform，Standard Edition）">
 <p>##一、面向对象</p>
 <h3 id="类、对象、变量"><a href="#类、对象、变量" class="headerlink" title="类、对象、变量"></a>类、对象、变量</h3><p>（1）所有的Java程序都已类class为组织单元；类由属性和方法两部分组成<br>（2）先创建对象，再使用对象<br>（3）成员变量：类中定义，自动定义初始值<br>局部变量：类方法中定义（两变量同名，局部变量有更高的优先级）</p>
 <h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法是定义在java类中的一个用来初始化对象的方法，与类同名且没有返回值。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> 构造方法名（）<span class="token punctuation">{</span>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> 构造方法名（）&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>其中构造方法名与类同名；当没有指定的构造方法时，系统会自动添加无参构造方法</p>
 <h3 id="Static使用"><a href="#Static使用" class="headerlink" title="Static使用"></a>Static使用</h3><p>Static修饰的成员属于整个类，被类的所有对象共享。可通过使用类名直接访问静态成员，也可通过对象名<br>Static可以修饰变量、方法和代码块</p>
-<h4 id="（1）Static使用之静态方法"><a href="#（1）Static使用之静态方法" class="headerlink" title="（1）Static使用之静态方法"></a>（1）Static使用之静态方法</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Helloworld</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>“<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>”<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<h4 id="（1）Static使用之静态方法"><a href="#（1）Static使用之静态方法" class="headerlink" title="（1）Static使用之静态方法"></a>（1）Static使用之静态方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">System.out.println(“***”);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Helloworld.print();</span><br><span class="line">    Helloworld demo = <span class="keyword">new</span> Helloworld;</span><br><span class="line">    demo.print();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    Helloworld<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Helloworld demo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Helloworld</span><span class="token punctuation">;</span>
-    demo<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意：静态方法中可以直接调用同类的静态成员，但不可以直接调用非静态成员；普通成员方法中可以直接访问同类的非静态变量和静态变量；静态方法中不能直接调用非静态成员方法</p>
 <h4 id="（2）Static使用之静态初始化块"><a href="#（2）Static使用之静态初始化块" class="headerlink" title="（2）Static使用之静态初始化块"></a>（2）Static使用之静态初始化块</h4><p>静态初始化块在类加载时执行，且只会执行一次，同时静态初始化块只能给静态变量赋值，不能初始化普通成员</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Helloworld</span> <span class="token punctuation">{</span>
-<span class="token keyword">int</span> num1<span class="token punctuation">;</span>
-<span class="token keyword">int</span> num2<span class="token punctuation">;</span>
-<span class="token keyword">static</span> <span class="token keyword">int</span> num3<span class="token punctuation">;</span>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Helloworld</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> num1;</span><br><span class="line"><span class="keyword">int</span> num2;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> num3;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Helloworld</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    num1 = <span class="number">91</span>;</span><br><span class="line">    System.out.println(<span class="string">"构造方法为num1赋值"</span>);</span><br><span class="line">    num2 = <span class="number">74</span>;</span><br><span class="line">    System.out.println(<span class="string">"初始化块为num2赋值"</span>);</span><br><span class="line">    num3 = <span class="number">83</span>;</span><br><span class="line">    System.out.println(<span class="string">"静态初始化块为num3赋值"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Helloworld hello = <span class="keyword">new</span> Helloworld();</span><br><span class="line">    System.out.println(hello.num1);</span><br><span class="line">    System.out.println(hello.num2);</span><br><span class="line">    System.out.println(num3);</span><br><span class="line">    Helloworld hello2 = <span class="keyword">new</span> Helloworld();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token keyword">public</span> <span class="token function">Helloworld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    num1 <span class="token operator">=</span> <span class="token number">91</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"构造方法为num1赋值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    num2 <span class="token operator">=</span> <span class="token number">74</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"初始化块为num2赋值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    num3 <span class="token operator">=</span> <span class="token number">83</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"静态初始化块为num3赋值"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    Helloworld hello <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Helloworld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hello<span class="token punctuation">.</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>hello<span class="token punctuation">.</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Helloworld hello2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Helloworld</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>运行结果：静态初始化块为num3赋值<br>初始化块为num2赋值<br>构造方法为num1赋值</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token number">91</span>
-<span class="token number">74</span>
-<span class="token number">83</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">91</span></span><br><span class="line"><span class="number">74</span></span><br><span class="line"><span class="number">83</span></span><br></pre></td></tr></table></figure>
+
 <p>初始化块为num2赋值<br>构造方法为num1赋值</p>
 <h2 id="二、java面向对象的特性"><a href="#二、java面向对象的特性" class="headerlink" title="二、java面向对象的特性"></a>二、java面向对象的特性</h2><p>封装性：将类的某些信息隐藏在内部，通过类的方法来实现操作访问<br>步骤：<br>1 修改属性可见性；<br>2 创建getter\setter方法；<br>3在方法中加入属性控制语句</p>
-<h3 id="1-静态内部类"><a href="#1-静态内部类" class="headerlink" title="(1)静态内部类:"></a>(1)静态内部类:</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SOuter</span> <span class="token punctuation">{</span>
-<span class="token keyword">private</span> <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>
-<span class="token keyword">static</span> <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<h3 id="1-静态内部类"><a href="#1-静态内部类" class="headerlink" title="(1)静态内部类:"></a>(1)静态内部类:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SOuter</span> </span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> a = <span class="number">99</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SInner</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"访问外部类b"</span> + SOuter.b);</span><br><span class="line">        System.out.println(<span class="string">"访问内部类b"</span> + b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//三行表示</span></span><br><span class="line">    SInner sInner;</span><br><span class="line">    sInner = <span class="keyword">new</span> SInner();</span><br><span class="line">    sInner.test();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//两行表示</span></span><br><span class="line">    SInner si = <span class="keyword">new</span> SInner();</span><br><span class="line">    si.test();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//一行表示</span></span><br><span class="line">    <span class="keyword">new</span> SInner().test();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">SInner</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"访问外部类b"</span> <span class="token operator">+</span> SOuter<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"访问内部类b"</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">//三行表示</span>
-    SInner sInner<span class="token punctuation">;</span>
-    sInner <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    sInner<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">//两行表示</span>
-    SInner si <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    si<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">//一行表示</span>
-    <span class="token keyword">new</span> <span class="token class-name">SInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>(2)成员内部类：访问外部类时使用this指针<br>（3）方法内部类：只能在该方法中使用，且不能使用访问控制符和Static修饰符</p>
 <h2 id="2-继承性"><a href="#2-继承性" class="headerlink" title="2. 继承性"></a>2. 继承性</h2><p>（1）一般形式：class 子类 extends 父类<br>（2）方法重写：子类对继承的父类方法不满意可以重写，调用时优先调用子类方法<br>（3）继承的初始化顺序：先初始化父类，再到子类；先执行初始化对象中属性，再执行狗在方法中的初始化<br>（4）父类对象–属性初始化–构造方法–子类对象–属性初始化–构造方法<br>（5）注意：如果子类构造方法中没有显示调用父类的构造方法，默认调用父类无参构造方法，若此父类没用无参的构造方法，则编译出错</p>
 <p>多态性<br>引用多态：父类的引用可以指向本类的对象，也可指向子类的对象<br>方法多态：创建本类对象时，调用的方法为本类方法；创建子类对象时，调用的方法为子类的重写的方法或者继承的方法</p>
 <h3 id="（1）抽象类"><a href="#（1）抽象类" class="headerlink" title="（1）抽象类"></a>（1）抽象类</h3><p>用关键字abstract修饰：抽象类只用声明不需要实现；包含抽象方法的类为抽象类；抽象类不能直接创建，可以定义引用变量。</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Telphone</span><span class="token punctuation">{</span>
-<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//抽象方法没有方法体，以分号结束</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）"><a href="#（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）" class="headerlink" title="（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）"></a>（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token punctuation">[</span>修饰符<span class="token punctuation">]</span> <span class="token keyword">class</span> 类名 <span class="token keyword">extends</span> 父类implemrnts 接口<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span>……
-<span class="token punctuation">{</span>类体部分
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Telphone</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">()</span></span>; <span class="comment">//抽象方法没有方法体，以分号结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）"><a href="#（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）" class="headerlink" title="（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）"></a>（2）接口（一种特殊的类，有全局变量和公共抽象方法组成）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符] <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">extends</span> 父类<span class="title">implemrnts</span> 接口1,2……</span></span><br><span class="line"><span class="class"></span>&#123;类体部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>注：接口经常与匿名内部类配合使用</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Iplay</span><span class="token punctuation">{</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">phone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">People</span> <span class="token keyword">implements</span> <span class="token class-name">Iplay</span><span class="token punctuation">{</span>
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-People test<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">People</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-test<span class="token punctuation">.</span><span class="token function">phone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">phone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>“手机可以玩游戏”<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> <span class="keyword">implements</span> <span class="title">Iplay</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">People test=<span class="keyword">new</span> People();</span><br><span class="line">test.phone();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">phone</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(“手机可以玩游戏”);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"><a href="#1-String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？" class="headerlink" title="1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？"></a>1.String、StringBuilder、StringBuffer的区别是什么，String为什么是不可变的？</h2><h3 id="不可变性"><a href="#不可变性" class="headerlink" title="不可变性"></a>不可变性</h3><p>String类的底层源码中，通过final关键字修饰字符串数组，private final char value[]，所以是不可变的。StringBuffer和StringBuilder类是集成自 AbstractStringBuilder 类， AbstractStringBuilder 类中的变量没有用final关键字修饰，所以是可变的。</p>
 <h3 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h3><p>String是不可变的，是常量，所以是线程安全的。StringBuilder和StringBuffer都继承自AbstractStringBuilder 类，StringBuffer对方法加了同步锁，所以是线程安全的，而StringBuilder没有加同步锁，所以是线程不安全的。</p>
 <h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>对String类型进行改变是都会new一个新的string对象，并指向新的对象；</p>
@@ -798,60 +725,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/16/Hexo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hexo安装教程">
-                        
-                        <span class="card-title">Hexo安装教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            安装hexo基础框架npm install hexo-cli -g
-更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
-hexo clean
-hexo g
-hexo d
-网易云音乐外链https://mus
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo-技术-Git/">
-                        <span class="chip bg-color">-Hexo -技术 -Git</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/2019/10/16/SQL总结/">
                     <div class="card-image">
                         
@@ -869,9 +742,9 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -889,6 +762,58 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                     
                     <a href="/tags/SQL-技术-基础/">
                         <span class="chip bg-color">-SQL -技术 -基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/16/Java总结/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java总结">
+                        
+                        <span class="card-title">Java总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java开篇javaSE（标准版） javaEE（企业版） javaME（微型版）
+JDK（java开发工具包）JRE（java运行环境）IDE（集成开发环境）
+Java SE（Java Platform，Standard Edition）
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java-技术-总结/">
+                        <span class="chip bg-color">-java -技术 -总结</span>
                     </a>
                     
                 </div>
@@ -1042,7 +967,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.3k</span>&nbsp;字
+                class="white-color">6.6k</span>&nbsp;字
             
             
             
