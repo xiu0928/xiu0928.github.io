@@ -34,7 +34,7 @@ na">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -461,7 +461,7 @@ na">
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        978
+                        983
                     </div>
                     
 
@@ -676,8 +676,10 @@ na">
 <h2 id="list-函数"><a href="#list-函数" class="headerlink" title="list()函数"></a>list()函数</h2><p>LAST() 函数返回指定的字段中最后一个记录的值。</p>
 <p>提示：可使用 ORDER BY 语句对记录进行排序。<br><strong>SQL LAST() 语法</strong><br><code>SELECT LAST(column_name) FROM table_name</code></p>
 <h2 id="Group-By函数"><a href="#Group-By函数" class="headerlink" title="Group By函数"></a>Group By函数</h2><p>GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。<br><strong>SQL GROUP BY 语法</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">operator</span> <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> table_name
+<span class="token keyword">WHERE</span> column_name operator <span class="token keyword">value</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name</code></pre>
 <h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>我们拥有下面这个 “stuinfo” 表：</p>
 <table>
 <thead>
@@ -755,8 +757,11 @@ na">
 </tr>
 </tbody></table>
 <h2 id="Having"><a href="#Having" class="headerlink" title="Having();"></a>Having();</h2><p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。<br><strong>SQL HAVING 语法</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name, aggregate_function(column_name)</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line"><span class="keyword">WHERE</span> column_name <span class="keyword">operator</span> <span class="keyword">value</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> column_name</span><br><span class="line"><span class="keyword">HAVING</span> aggregate_function(column_name) <span class="keyword">operator</span> <span class="keyword">value</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> table_name
+<span class="token keyword">WHERE</span> column_name operator <span class="token keyword">value</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name
+<span class="token keyword">HAVING</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span> operator <span class="token keyword">value</span></code></pre>
 
             </div>
             <hr/>

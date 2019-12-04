@@ -5,7 +5,15 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="奇淫巧技, 我的快乐">
-    <meta name="description" content="Dos代码雨1234567891011121314@echo offcolor 0a:startset num=0set &#34;echos= &#34;:numset /a a1=%random%%%3if &#34;%a1%&#34; == &#34;1&#34; set &#34;a1=">
+    <meta name="description" content="Dos代码雨@echo off
+color 0a
+:start
+set num=0
+set &#34;echos= &#34;
+:num
+set /a a1=%random%%%3
+if &#34;%a1%&#34; == &#34;1&#34; set &#34;a1= &#34;
+if &#34;%a1%&#34;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +34,7 @@
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -449,7 +457,7 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        98
+                        104
                     </div>
                     
 
@@ -472,12 +480,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Dos代码雨"><a href="#Dos代码雨" class="headerlink" title="Dos代码雨"></a>Dos代码雨</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">color</span> <span class="number">0</span>a</span><br><span class="line">:<span class="built_in">start</span></span><br><span class="line"><span class="built_in">set</span> num=<span class="number">0</span></span><br><span class="line"><span class="built_in">set</span> "echos= "</span><br><span class="line">:num</span><br><span class="line"><span class="built_in">set</span> /a a1=<span class="variable">%random%</span><span class="variable">%%3</span></span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%a1%</span>" == "<span class="number">1</span>" <span class="built_in">set</span> "a1= "</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%a1%</span>" == "<span class="number">2</span>" <span class="built_in">set</span> "a1= "</span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%a1%</span>" == "<span class="number">0</span>" <span class="built_in">set</span> /a a1=<span class="variable">%random%</span><span class="variable">%%2</span></span><br><span class="line"><span class="built_in">set</span> echos=<span class="variable">%echos%</span><span class="variable">%a1%</span></span><br><span class="line"><span class="built_in">set</span> /a num=<span class="variable">%num%</span>+<span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> "<span class="variable">%num%</span>" == "<span class="number">75</span>" <span class="built_in">echo</span> <span class="variable">%echos%</span>&amp;&amp;<span class="keyword">goto</span> :<span class="built_in">start</span></span><br><span class="line"><span class="keyword">goto</span> :num</span><br></pre></td></tr></table></figure>
-
+                <h2 id="Dos代码雨"><a href="#Dos代码雨" class="headerlink" title="Dos代码雨"></a>Dos代码雨</h2><pre class=" language-Dos"><code class="language-Dos">@echo off
+color 0a
+:start
+set num=0
+set "echos= "
+:num
+set /a a1=%random%%%3
+if "%a1%" == "1" set "a1= "
+if "%a1%" == "2" set "a1= "
+if "%a1%" == "0" set /a a1=%random%%%2
+set echos=%echos%%a1%
+set /a num=%num%+1
+if "%num%" == "75" echo %echos%&&goto :start
+goto :num</code></pre>
 <h2 id="MySQL查看表的所有列"><a href="#MySQL查看表的所有列" class="headerlink" title="MySQL查看表的所有列"></a>MySQL查看表的所有列</h2><p><code>show full columns from [table]</code></p>
-<h2 id="JavaScript删除数组"><a href="#JavaScript删除数组" class="headerlink" title="JavaScript删除数组"></a>JavaScript删除数组</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br><span class="line"></span><br><span class="line">arr.length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(arr);</span><br></pre></td></tr></table></figure>
+<h2 id="JavaScript删除数组"><a href="#JavaScript删除数组" class="headerlink" title="JavaScript删除数组"></a>JavaScript删除数组</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-<h2 id="特别简单的取整技巧"><a href="#特别简单的取整技巧" class="headerlink" title="特别简单的取整技巧"></a>特别简单的取整技巧</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">5.6664</span>;</span><br><span class="line"><span class="built_in">console</span>.log(~~num);<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+arr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h2 id="特别简单的取整技巧"><a href="#特别简单的取整技巧" class="headerlink" title="特别简单的取整技巧"></a>特别简单的取整技巧</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">5.6664</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token operator">~</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5</span></code></pre>
+
             </div>
             <hr/>
 
@@ -668,60 +695,6 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/16/Hexo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hexo安装教程">
-                        
-                        <span class="card-title">Hexo安装教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            安装hexo基础框架npm install hexo-cli -g
-更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
-hexo clean
-hexo g
-hexo d
-网易云音乐外链https://mus
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo-技术-Git/">
-                        <span class="chip bg-color">-Hexo -技术 -Git</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/2019/10/16/SQL总结/">
                     <div class="card-image">
                         
@@ -739,9 +712,9 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -759,6 +732,57 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                     
                     <a href="/tags/SQL-技术-基础/">
                         <span class="chip bg-color">-SQL -技术 -基础</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/16/Java总结/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java总结">
+                        
+                        <span class="card-title">Java总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java开篇javaSE（标准版） javaEE（企业版） javaME（微型版）
+JDK（java开发工具包）JRE（java运行环境）IDE（集成开发环境）
+Java SE（Java Platform，Standard Edition）
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java-技术-总结/">
+                        <span class="chip bg-color">-java -技术 -总结</span>
                     </a>
                     
                 </div>

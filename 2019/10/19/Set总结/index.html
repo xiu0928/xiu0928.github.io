@@ -5,9 +5,9 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Set总结, 我的快乐">
-    <meta name="description" content="SetCollection        以value形式存在Set        无序无重复
+    <meta name="description" content="SetCollection    以value形式存在Set    无序无重复
 1.具体实现类HashSetTreeSet
-2.基本的使用3.无序 无重复无序：我们使用集合存放的顺序 集合内取出来的顺序不一致集合本身是有自己">
+2.基本的使用3.无序 无重复无序：我们使用集合存放的顺序 集合内取出来的顺序不一致集合本身是有自己的算法排布顺序 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +28,7 @@
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -451,7 +451,7 @@
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        195
+                        190
                     </div>
                     
 
@@ -474,10 +474,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>Collection        以value形式存在<br>Set        无序无重复</p>
+                <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p>Collection    以value形式存在<br>Set    无序无重复</p>
 <h3 id="1-具体实现类"><a href="#1-具体实现类" class="headerlink" title="1.具体实现类"></a>1.具体实现类</h3><p>HashSet<br>TreeSet</p>
 <h3 id="2-基本的使用"><a href="#2-基本的使用" class="headerlink" title="2.基本的使用"></a>2.基本的使用</h3><h3 id="3-无序-无重复"><a href="#3-无序-无重复" class="headerlink" title="3.无序 无重复"></a>3.无序 无重复</h3><p>无序：我们使用集合存放的顺序 集合内取出来的顺序不一致<br>集合本身是有自己的算法排布顺序  hash算法</p>
-<h3 id="HashSet—-gt-（HashMap-数组-链表-散链表）"><a href="#HashSet—-gt-（HashMap-数组-链表-散链表）" class="headerlink" title="HashSet—&gt;（HashMap 数组+链表 散链表）"></a>HashSet—&gt;（HashMap 数组+链表 散链表）</h3><h4 id="1-java-utill"><a href="#1-java-utill" class="headerlink" title="1.java.utill"></a>1.java.utill</h4><h4 id="2-如何创建对象-无参数-有参数"><a href="#2-如何创建对象-无参数-有参数" class="headerlink" title="2.如何创建对象 无参数 有参数"></a>2.如何创建对象 无参数 有参数</h4><p><code>HashSet&lt;String&gt; set =new HashSet&lt;String&gt;();</code></p>
+<h3 id="HashSet-gt-（HashMap-数组-链表-散链表）"><a href="#HashSet-gt-（HashMap-数组-链表-散链表）" class="headerlink" title="HashSet---&gt;（HashMap 数组+链表 散链表）"></a>HashSet---&gt;（HashMap 数组+链表 散链表）</h3><h4 id="1-java-utill"><a href="#1-java-utill" class="headerlink" title="1.java.utill"></a>1.java.utill</h4><h4 id="2-如何创建对象-无参数-有参数"><a href="#2-如何创建对象-无参数-有参数" class="headerlink" title="2.如何创建对象 无参数 有参数"></a>2.如何创建对象 无参数 有参数</h4><p><code>HashSet&lt;String&gt; set =new HashSet&lt;String&gt;();</code></p>
 <h4 id="3-集合容器的基本使用"><a href="#3-集合容器的基本使用" class="headerlink" title="3.集合容器的基本使用"></a>3.集合容器的基本使用</h4><ul>
 <li>增    add(value)   addAall(collection c)   retainAll  removeAll  并集 交集 差集</li>
 <li>删    boolean = remove(Objest)</li>
@@ -485,8 +485,16 @@
 <li>查    增强for循环集合遍历</li>
 </ul>
 <hr>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String v:set)&#123;</span><br><span class="line">System.out.println(v);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//迭代器：</span></span><br><span class="line">Iterator&lt;String&gt; it = set.iterator();</span><br><span class="line"><span class="comment">//判断下一个位置是否有元素</span></span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">	String value = it.next();</span><br><span class="line">	System.out.println(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String v<span class="token operator">:</span>set<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//迭代器：</span>
+Iterator<span class="token operator">&lt;</span>String<span class="token operator">></span> it <span class="token operator">=</span> set<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//判断下一个位置是否有元素</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    String value <span class="token operator">=</span> it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
