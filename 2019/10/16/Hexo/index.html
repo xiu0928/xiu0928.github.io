@@ -5,12 +5,10 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Hexo安装教程, 我的快乐">
-    <meta name="description" content="安装hexo基础框架npm install hexo-cli -g
-更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
+    <meta name="description" content="安装hexo基础框架npm install hexo-cli -g更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
 hexo clean
 hexo g
-hexo d
-网易云音乐外链https://mus">
+hexo d网易云音乐外链https://music">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -454,7 +452,7 @@ hexo d
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        233
+                        234
                     </div>
                     
 
@@ -477,45 +475,35 @@ hexo d
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="安装hexo基础框架"><a href="#安装hexo基础框架" class="headerlink" title="安装hexo基础框架"></a>安装hexo基础框架</h2><pre class=" language-git"><code class="language-git">npm install hexo-cli -g</code></pre>
-<h2 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h2><p>我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令</p>
-<pre class=" language-git"><code class="language-git">hexo clean
+                <h2 id="安装hexo基础框架"><a href="#安装hexo基础框架" class="headerlink" title="安装hexo基础框架"></a>安装hexo基础框架</h2><pre><code>npm install hexo-cli -g</code></pre><h2 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h2><p>我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令</p>
+<pre><code>hexo clean
 hexo g
-hexo d</code></pre>
-<h2 id="网易云音乐外链"><a href="#网易云音乐外链" class="headerlink" title="网易云音乐外链"></a>网易云音乐外链</h2><pre class=" language-git"><code class="language-git">https://music.163.com/song/media/outer/url?id=484365611.mp3</code></pre>
-<h2 id="清空git缓存"><a href="#清空git缓存" class="headerlink" title="清空git缓存"></a>清空git缓存</h2><pre class=" language-git"><code class="language-git">git rm -r --cached .
-git gc</code></pre>
-<h2 id="更换仓库："><a href="#更换仓库：" class="headerlink" title="更换仓库："></a>更换仓库：</h2><pre class=" language-git"><code class="language-git">git remote -v
+hexo d</code></pre><h2 id="网易云音乐外链"><a href="#网易云音乐外链" class="headerlink" title="网易云音乐外链"></a>网易云音乐外链</h2><pre><code>https://music.163.com/song/media/outer/url?id=484365611.mp3</code></pre><h2 id="清空git缓存"><a href="#清空git缓存" class="headerlink" title="清空git缓存"></a>清空git缓存</h2><pre><code>git rm -r --cached .
+git gc</code></pre><h2 id="更换仓库："><a href="#更换仓库：" class="headerlink" title="更换仓库："></a>更换仓库：</h2><pre><code>git remote -v
 git remote set-url origin 新仓库
 
-git remote set-url origin https://github.com/xiu0928/love.git</code></pre>
-<h2 id="查看当前用户名和邮箱"><a href="#查看当前用户名和邮箱" class="headerlink" title="查看当前用户名和邮箱"></a>查看当前用户名和邮箱</h2><pre class=" language-git"><code class="language-git">git config user.name
-git config user.email</code></pre>
-<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><pre class=" language-git"><code class="language-git">git config --global user.name <span class="token string">"xiu0928"</span>
-git config --global user.email <span class="token string">"2011447576@qq.com"</span></code></pre>
-<h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><pre class=" language-git"><code class="language-git">git init
+git remote set-url origin https://github.com/xiu0928/love.git</code></pre><h2 id="查看当前用户名和邮箱"><a href="#查看当前用户名和邮箱" class="headerlink" title="查看当前用户名和邮箱"></a>查看当前用户名和邮箱</h2><pre><code>git config user.name
+git config user.email</code></pre><h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><pre><code>git config --global user.name &quot;xiu0928&quot;
+git config --global user.email &quot;2011447576@qq.com&quot;</code></pre><h2 id="上传项目"><a href="#上传项目" class="headerlink" title="上传项目"></a>上传项目</h2><pre><code>git init
 
 git add . 
 
-git commit -m <span class="token string">"first commit"</span>
+git commit -m &quot;first commit&quot;
 
 git remote add origin https://自己的仓库url地址（上面有说到） 将本地的仓库关联到github上，
 
-git push -u origin master</code></pre>
-<h2 id="更新到GitHub上"><a href="#更新到GitHub上" class="headerlink" title="更新到GitHub上"></a>更新到GitHub上</h2><pre class=" language-git"><code class="language-git">hexo clean
+git push -u origin master</code></pre><h2 id="更新到GitHub上"><a href="#更新到GitHub上" class="headerlink" title="更新到GitHub上"></a>更新到GitHub上</h2><pre><code>hexo clean
 
 hexo generate
 
-hexo deploy</code></pre>
-<h2 id="更新到GitHub上-1"><a href="#更新到GitHub上-1" class="headerlink" title="更新到GitHub上"></a>更新到GitHub上</h2><pre class=" language-git"><code class="language-git">git clone https://github.com/xiu0928/xiu0928.github.io .deploy/xiu0928.github.io
+hexo deploy</code></pre><h2 id="更新到GitHub上-1"><a href="#更新到GitHub上-1" class="headerlink" title="更新到GitHub上"></a>更新到GitHub上</h2><pre><code>git clone https://github.com/xiu0928/xiu0928.github.io .deploy/xiu0928.github.io
 
 hexo generate   
 cp -R public/* .deploy/xiu0928.github.io  
 cd .deploy/xiu0928.github.io 
 git add .  
-git commit -m <span class="token string">"update"</span> 
+git commit -m &quot;update&quot; 
 git push </code></pre>
-
             </div>
             <hr/>
 
@@ -957,7 +945,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.6k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             

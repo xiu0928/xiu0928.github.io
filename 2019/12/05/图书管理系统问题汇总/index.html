@@ -4,16 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="奇淫巧技, 我的快乐">
-    <meta name="description" content="Dos代码雨@echo off
-color 0a
-:start
-set num=0
-set &#34;echos= &#34;
-:num
-set /a a1=%random%%%3
-if &#34;%a1%&#34; == &#34;1&#34; set &#34;a1= &#34;
-if &#34;%a1%&#34;">
+    <meta name="keywords" content="图书管理系统问题汇总, 我的快乐">
+    <meta name="description" content="1.    JSTL标签引入失败解决:将JSTL Jar包导入到项目中
+2.    使用JSTL服务器抛异常解决: JSTL Jar中tld目录放到webroot/MATA-INF中
+3.    数据库编码问题，网页取数据库前台显示乱码。解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +15,7 @@ if &#34;%a1%&#34;">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>奇淫巧技 | 我的快乐</title>
+    <title>图书管理系统问题汇总 | 我的快乐</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,13 +302,13 @@ if &#34;%a1%&#34;">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        奇淫巧技
+                        图书管理系统问题汇总
                     </div>
                 </div>
             </div>
@@ -426,8 +420,8 @@ if &#34;%a1%&#34;">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Dos-技术-巧记/">
-                                <span class="chip bg-color">-Dos -技术 -巧记</span>
+                            <a href="/tags/jsp-bug-ajax/">
+                                <span class="chip bg-color">-jsp -bug -ajax</span>
                             </a>
                         
                     </div>
@@ -438,8 +432,8 @@ if &#34;%a1%&#34;">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/技巧/" class="post-category">
-                                技巧
+                            <a href="/categories/jsp/" class="post-category">
+                                jsp
                             </a>
                         
                     </div>
@@ -450,21 +444,21 @@ if &#34;%a1%&#34;">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-16
+                    2019-12-05
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        104
+                        928
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        3 分
                     </div>
                     
                 
@@ -480,30 +474,47 @@ if &#34;%a1%&#34;">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Dos代码雨"><a href="#Dos代码雨" class="headerlink" title="Dos代码雨"></a>Dos代码雨</h2><pre class="line-numbers language-Dos"><code class="language-Dos">@echo off
-color 0a
-:start
-set num=0
-set "echos= "
-:num
-set /a a1=%random%%%3
-if "%a1%" == "1" set "a1= "
-if "%a1%" == "2" set "a1= "
-if "%a1%" == "0" set /a a1=%random%%%2
-set echos=%echos%%a1%
-set /a num=%num%+1
-if "%num%" == "75" echo %echos%&&goto :start
-goto :num<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="MySQL查看表的所有列"><a href="#MySQL查看表的所有列" class="headerlink" title="MySQL查看表的所有列"></a>MySQL查看表的所有列</h2><p><code>show full columns from [table]</code></p>
-<h2 id="JavaScript删除数组"><a href="#JavaScript删除数组" class="headerlink" title="JavaScript删除数组"></a>JavaScript删除数组</h2><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-arr<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="特别简单的取整技巧"><a href="#特别简单的取整技巧" class="headerlink" title="特别简单的取整技巧"></a>特别简单的取整技巧</h2><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">5.6664</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token operator">~</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <h2 id="1-JSTL标签引入失败"><a href="#1-JSTL标签引入失败" class="headerlink" title="1.    JSTL标签引入失败"></a>1.    JSTL标签引入失败</h2><p>解决:将JSTL Jar包导入到项目中</p>
+<h2 id="2-使用JSTL服务器抛异常"><a href="#2-使用JSTL服务器抛异常" class="headerlink" title="2.    使用JSTL服务器抛异常"></a>2.    使用JSTL服务器抛异常</h2><p>解决: JSTL Jar中tld目录放到webroot/MATA-INF中</p>
+<h2 id="3-数据库编码问题，网页取数据库前台显示乱码。"><a href="#3-数据库编码问题，网页取数据库前台显示乱码。" class="headerlink" title="3.    数据库编码问题，网页取数据库前台显示乱码。"></a>3.    数据库编码问题，网页取数据库前台显示乱码。</h2><p>解决:数据库编码与服务器编码统一</p>
+<h2 id="4-图书借阅与归还问题"><a href="#4-图书借阅与归还问题" class="headerlink" title="4.    图书借阅与归还问题"></a>4.    图书借阅与归还问题</h2><p>问题描述:<br>同一本图书借出两次，第一次归还没问题，第二次归还在还书系统找不到该借书的信息，但数据库中该图书已经标识已经借出.</p>
+<hr>
+<p>解决:<br>借书系统所操作的数据是用户在前台收藏的图书，当在后台借阅后，当前收藏记录就删除了，而还书系统，所操作的数据也是收藏记录，收藏记录删除导致还书系统取不到借书数据，将还书系统对应的数据改为借书的记录。</p>
+<h2 id="5-图书的重复借阅以及重复归还问题"><a href="#5-图书的重复借阅以及重复归还问题" class="headerlink" title="5.    图书的重复借阅以及重复归还问题"></a>5.    图书的重复借阅以及重复归还问题</h2><p>问题描述:<br>在借书系统中，当点击借阅后，在该页面刷新网页就会一直重复借阅，还书也是一样。如果图书管理员操作不当，刷新了当前网页，则图书就会出现重复借阅。</p>
+<hr>
+<p>解决:<br>在后端中，用户执行了借书操作，如果该图书借阅成功后，重新定向URL，并删除上一次借书的临时数据，则用户无论怎么执行刷新就只是获取借阅图书的信息而已。<br>还书也是该操作。</p>
+<h2 id="6-上传图片到服务器"><a href="#6-上传图片到服务器" class="headerlink" title="6.上传图片到服务器"></a>6.上传图片到服务器</h2><p>问题描述:<br>上传服务器图片到服务器需要刷新img文件夹才能在页面上显示出来</p>
+<hr>
+<p>解决:<br>因为上传的路径为绝对路径，更改为相对路径即可<br><strong>代码：</strong><br><code>String path = request.getSession().getServletContext().getRealPath(&quot;assets/images/book&quot;);</code></p>
+<h2 id="7-用ajax请求服务器返回json数据出错"><a href="#7-用ajax请求服务器返回json数据出错" class="headerlink" title="7.用ajax请求服务器返回json数据出错"></a>7.用ajax请求服务器返回json数据出错</h2><p>解决：因为没有正确的下载相应版本的jar包，有的jar包的版本之间是有依赖关系的<br>jar包：</p>
+<ol>
+<li>commons-beanutils-1.7.0.jar</li>
+<li>commons-collections-3.2.1.jar</li>
+<li>commons-lang-2.6.jar</li>
+<li>commons-logging-1.1.3.jar</li>
+<li>ezmorph-1.0.6.jar</li>
+<li>json-lib-2.1-jdk15.jar</li>
+</ol>
+<hr>
+<h2 id="8-判断用户是否登录"><a href="#8-判断用户是否登录" class="headerlink" title="8.判断用户是否登录"></a>8.判断用户是否登录</h2><p>解决:<br>在登录的时候，把用户的账号密码存储到Session里面，然后写一个拦截器，拦截需要登录才能进行请求的服务器。</p>
+<h2 id="9-关于页面上登录判断的处理"><a href="#9-关于页面上登录判断的处理" class="headerlink" title="9.关于页面上登录判断的处理"></a>9.关于页面上登录判断的处理</h2><p>解决:<br>在访问页面的时候用ajax进行请求服务器，如果登录会返回用户的信息，<br>如果没登陆会返回为null。然后ajax拿到服务器返回的json数据。进行判断<br>如果有数据则显示登录用户的名字，如果没有数据则显示登录</p>
+<h2 id="10-服务器访问数据库报错问题"><a href="#10-服务器访问数据库报错问题" class="headerlink" title="10.服务器访问数据库报错问题"></a>10.服务器访问数据库报错问题</h2><p>解决:<br>因为引用的jar包的版本与之对应的MySQL数据库的版本不一致，<br>5.0的jar包数据驱动是：<br><code>com.mysql.jdbc.Driver</code><br>8.0的jar包数据驱动是：<br><code>com.mysql.cj.jdbc.Driver</code></p>
+<hr>
+<h2 id="11-怎么判断管理员是锁屏和退出登录"><a href="#11-怎么判断管理员是锁屏和退出登录" class="headerlink" title="11.怎么判断管理员是锁屏和退出登录"></a>11.怎么判断管理员是锁屏和退出登录</h2><p>解决:<br>当管理员登录的时候会把账号和密码保存到session里面，锁屏则把保存session里面的密码清楚，退出登录则清空账号密码。<br>代码实现：</p>
+<pre class="line-numbers language-jsp"><code class="language-jsp">Object admin = ((HttpServletRequest) request).getSession().getAttribute("admin");
+//取学号
+Object pwd = ((HttpServletRequest) request).getSession().getAttribute("pwd");
+//取密码
+if(admin!=null&&pwd!=null){//判断学号和密码是否为空
+    chain.doFilter(request, response);//放行
+}else if(admin!=null&&pwd==null){
+    ((HttpServletResponse) response).sendRedirect("/librarySystem/lockscreen.html");
+    //密码为空则跳转到锁屏页面
+}else{
+    ((HttpServletResponse) response).sendRedirect("/librarySystem/login.html");
+    //账号密码都为空跳转到登录页面
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
 
             </div>
             <hr/>
@@ -670,7 +681,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         repo: 'xiu0928.github.io',
         owner: 'xiu0928',
         admin: ["xiu0928"],
-        id: '2019-10-16T16-38-53',
+        id: '2019-12-05T16-02-22',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -691,47 +702,50 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/10/16/SQL总结/">
+                <a href="/2019/12/05/图书管理系统问题汇总/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="SQL基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="图书管理系统问题汇总">
                         
-                        <span class="card-title">SQL基础</span>
+                        <span class="card-title">图书管理系统问题汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SQL 语法数据库表一个数据库通常包含一个或多个表。每个表由一个名字标识（例如“客户”或者“订单”）。表包含带有数据的记录（行）
-SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完成。下面的语句从表中选取 LastName 列
+                            1.    JSTL标签引入失败解决:将JSTL Jar包导入到项目中
+2.    使用JSTL服务器抛异常解决: JSTL Jar中tld目录放到webroot/MATA-INF中
+3.    数据库编码问题，网页取数据库前台显示乱码。解
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL/" class="post-category">
-                                    SQL
+                            <a href="/categories/jsp/" class="post-category">
+                                    jsp
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL-技术-基础/">
-                        <span class="chip bg-color">-SQL -技术 -基础</span>
+                    <a href="/tags/jsp-bug-ajax/">
+                        <span class="chip bg-color">-jsp -bug -ajax</span>
                     </a>
                     
                 </div>
@@ -745,35 +759,33 @@ SQL 语句您需要在数据库上执行的大部分工作都由 SQL 语句完�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/16/Java总结/">
+                <a href="/2019/10/22/SQL语法/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="SQL语法">
                         
-                        <span class="card-title">Java总结</span>
+                        <span class="card-title">SQL语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java开篇javaSE（标准版） javaEE（企业版） javaME（微型版）
-JDK（java开发工具包）JRE（java运行环境）IDE（集成开发环境）
-Java SE（Java Platform，Standard Edition）
+                            1.数据库基础语法创建数据库create database 数据库名;
+删除数据库drop database 数据库名;
+选择数据库use 数据库名;
+2.表的约束主键约束primary key
+主键自增auto_increment pri
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-10-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            李秀远
                             
                         </span>
                     </div>
@@ -781,8 +793,8 @@ Java SE（Java Platform，Standard Edition）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java-技术-总结/">
-                        <span class="chip bg-color">-java -技术 -总结</span>
+                    <a href="/tags/语法-SQL/">
+                        <span class="chip bg-color">-语法 -SQL</span>
                     </a>
                     
                 </div>

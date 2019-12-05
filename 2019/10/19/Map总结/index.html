@@ -498,14 +498,14 @@ Map映射    通过某一个key可以直接定位到value值存储的方式：�
 </tr>
 </tbody></table>
 <p>遍历    //获取map集合的全部key</p>
-<pre class=" language-java"><code class="language-java">Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> keys <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-java"><code class="language-java">Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> keys <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//通过迭代器去遍历keys</span>
 Iterator<span class="token operator">&lt;</span>Integer<span class="token operator">></span> it <span class="token operator">=</span> keys<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span><span class="token punctuation">(</span>it<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     Integer key <span class="token operator">=</span> it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     String value <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>key<span class="token operator">+</span><span class="token string">"-"</span><span class="token operator">+</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>size();</p>
 <h3 id="4-除了上面的几个常用的方法可以去api去看"><a href="#4-除了上面的几个常用的方法可以去api去看" class="headerlink" title="4.除了上面的几个常用的方法可以去api去看"></a>4.除了上面的几个常用的方法可以去api去看</h3><h3 id="5-map集合什么情况下用："><a href="#5-map集合什么情况下用：" class="headerlink" title="5.map集合什么情况下用："></a>5.map集合什么情况下用：</h3><h4 id="1-想要存储一组元素"><a href="#1-想要存储一组元素" class="headerlink" title="1.想要存储一组元素"></a>1.想要存储一组元素</h4><p>数组 or 集合    如果存储的元素以后长度不变用数组，不确定用集合</p>
 <h4 id="2-如果发现长度以后不确定-–-gt-集合"><a href="#2-如果发现长度以后不确定-–-gt-集合" class="headerlink" title="2.如果发现长度以后不确定 –&gt;集合"></a>2.如果发现长度以后不确定 –&gt;集合</h4><table>
@@ -980,7 +980,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.6k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             

@@ -676,10 +676,10 @@ na">
 <h2 id="list-函数"><a href="#list-函数" class="headerlink" title="list()函数"></a>list()函数</h2><p>LAST() 函数返回指定的字段中最后一个记录的值。</p>
 <p>提示：可使用 ORDER BY 语句对记录进行排序。<br><strong>SQL LAST() 语法</strong><br><code>SELECT LAST(column_name) FROM table_name</code></p>
 <h2 id="Group-By函数"><a href="#Group-By函数" class="headerlink" title="Group By函数"></a>Group By函数</h2><p>GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。<br><strong>SQL GROUP BY 语法</strong></p>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
 <span class="token keyword">FROM</span> table_name
 <span class="token keyword">WHERE</span> column_name operator <span class="token keyword">value</span>
-<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name</code></pre>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>我们拥有下面这个 “stuinfo” 表：</p>
 <table>
 <thead>
@@ -757,11 +757,11 @@ na">
 </tr>
 </tbody></table>
 <h2 id="Having"><a href="#Having" class="headerlink" title="Having();"></a>Having();</h2><p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。<br><strong>SQL HAVING 语法</strong></p>
-<pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
+<pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> column_name<span class="token punctuation">,</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span>
 <span class="token keyword">FROM</span> table_name
 <span class="token keyword">WHERE</span> column_name operator <span class="token keyword">value</span>
 <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> column_name
-<span class="token keyword">HAVING</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span> operator <span class="token keyword">value</span></code></pre>
+<span class="token keyword">HAVING</span> aggregate_function<span class="token punctuation">(</span>column_name<span class="token punctuation">)</span> operator <span class="token keyword">value</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr/>
@@ -1015,12 +1015,10 @@ Map映射    通过某一个key可以直接定位到value值存储的方式：�
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装hexo基础框架npm install hexo-cli -g
-更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
+                            安装hexo基础框架npm install hexo-cli -g更新内容我是用windows系统，打开cmd然后进入到你的博客文件目录，输入以下命令
 hexo clean
 hexo g
-hexo d
-网易云音乐外链https://mus
+hexo d网易云音乐外链https://music
                         
                     </div>
                     <div class="publish-info">
@@ -1197,7 +1195,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.6k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             
